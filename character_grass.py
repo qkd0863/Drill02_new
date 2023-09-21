@@ -15,7 +15,7 @@ def run_circle():
     print('circle')
     cx, cy , r = 400, 300, 200
     
-    for deg in range(0,360,5):
+    for deg in range(270,630,5):
         x = r * math.cos(math.radians(deg)) + cx
         y = r * math.sin(math.radians(deg)) + cy
         clear_canvas_now()
@@ -25,12 +25,19 @@ def run_circle():
 
 
     
-    pass
 
 
 def run_rectangle():
     print('rectangle')
-    pass
+
+    
+    for x in range(50,750+1,5):
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,90)
+        delay(0.1)       
+
+    
 
 
 
@@ -39,7 +46,7 @@ def run_rectangle():
 
 while(True):
     run_rectangle()
-    run_circle()
+    #run_circle()
     break
 
 
